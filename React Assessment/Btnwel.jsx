@@ -1,26 +1,35 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-function Btnwel() {
-    const [isHello, setIsHello] = useState(true);
+const Button = () => {
+    const [count, setCount] = useState(0);
 
-    const handleClick = () => {
-        setIsHello(prev => !prev);
+    const buttonStyle = {
+        backgroundColor: "#ffc107",
+        color: "#212529",
+        border: "none",
+        padding: "10px 24px",
+        borderRadius: "4px",
+        fontSize: "16px",
+        cursor: "pointer",
+        marginTop: "20px"
     };
 
+
     return (
-        <div className='Container1'>
-            <button onClick={handleClick} style={{
-            backgroundColor: isHello ? '#4CAF50' : '#f44336',
-            color: 'white',
-            border: 'none',
-            padding: '10px 20px',
-            borderRadius: '5px',
-            cursor: 'pointer',  
-        }}>
-            {isHello ? 'Hello' : 'Welcome Back'}
-        </button>
+        <div>
+            <div style={{ marginTop: "16px", fontSize: "25px" }}>
+                Count: {count}
+            </div>
+            <button
+                style={buttonStyle}
+                onClick={() => setCount(count + 1)}
+            >
+                Increase Count
+            </button>
+        
+            
         </div>
     );
-}
+};
 
-export default Btnwel;
+export default Button;
