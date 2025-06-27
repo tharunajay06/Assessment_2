@@ -9,16 +9,13 @@ function Btnwel() {
 
     return (
         <div className='Container1'>
-            <h2>Question 2</h2>
             <button onClick={handleClick} style={{
             backgroundColor: isHello ? '#4CAF50' : '#f44336',
             color: 'white',
             border: 'none',
             padding: '10px 20px',
             borderRadius: '5px',
-            cursor: 'pointer',
-            display: 'flex',
-            alignItems: 'center',   
+            cursor: 'pointer',  
         }}>
             {isHello ? 'Hello' : 'Welcome Back'}
         </button>
